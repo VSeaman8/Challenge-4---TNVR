@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import SearchEngine from "./SearchEngine";
 
 const Navbar = () => {
+  const location = useLocation();
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg ">
       <Link className="navbar-brand" href="#">
         Navbar
       </Link>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNavDropdown"
@@ -15,16 +17,16 @@ const Navbar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
+      <div className="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul className="navbar-nav">
+          <li className="nav-item active">
             <Link className="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
+              Home <span className="sr-only">(current)</span>
             </Link>
           </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item dropdown">
             <Link
               className="nav-link dropdown-toggle"
               href="#"
@@ -33,7 +35,7 @@ const Navbar = () => {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Dropdown link
+              Favourite Locations
             </Link>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <Link className="dropdown-item" href="#">
@@ -49,6 +51,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      {location.pathname !== "/" && <SearchEngine />}
     </nav>
   );
 };

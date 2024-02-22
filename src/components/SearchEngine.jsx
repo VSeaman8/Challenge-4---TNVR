@@ -1,21 +1,22 @@
 const SearchEngine = () => {
   return (
     <>
-      <form>
-        <div class="form-group">
-          <label htmlFor="locationInput">Location</label>
-          <input
-            type="text"
-            class="form-control"
-            id="locationInput"
-            placeholder="Enter Location"
-          />
-        </div>
+      <div className="search-container">
+        <form>
+          <div className="form-group">
+            <input
+              type="text"
+              className="form-control"
+              id="locationInput"
+              placeholder="Enter Location"
+            />
+          </div>
 
-        <button type="submit" class="btn btn-primary">
-          Submit
-        </button>
-      </form>
+          <button type="submit" className="btn">
+            Submit
+          </button>
+        </form>
+      </div>
     </>
   );
 };
