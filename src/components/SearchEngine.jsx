@@ -1,3 +1,5 @@
+import "./SearchEngine.css";
+
 const SearchEngine = () => {
   return (
     <>
@@ -12,9 +14,7 @@ const SearchEngine = () => {
             />
           </div>
 
-          <button type="submit" className="btn">
-            Submit
-          </button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </>
