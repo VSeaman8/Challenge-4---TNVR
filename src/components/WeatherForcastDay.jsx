@@ -1,4 +1,4 @@
-import Weather from "../pages/Weather";
+import "./WeatherForecast.css";
 
 const WeatherForecastDay = ({ day, temperature, weather, icon }) => {
   return (

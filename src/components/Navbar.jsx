@@ -40,7 +40,7 @@ const Navbar = () => {
                 Favourite Locations
               </Link>
               <div
-                class="dropdown-menu"
+                className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <Link className="dropdown-item" href="#">
