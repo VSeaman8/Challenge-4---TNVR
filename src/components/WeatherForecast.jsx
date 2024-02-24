@@ -1,7 +1,5 @@
 import WeatherForecastDay from "./WeatherForcastDay.jsx";
 
-import "./WeatherForecast.css";
-
 const WeatherForecast = () => {
   return (
     <div className="weather-grid">

@@ -1,5 +1,3 @@
-import "./WeatherForecast.css";
-
 const WeatherForecastDay = ({ day, temperature, weather, icon }) => {
   return (
     <div className="weather-day">

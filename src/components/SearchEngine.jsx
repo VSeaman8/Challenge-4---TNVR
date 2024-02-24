@@ -1,9 +1,10 @@
 import "./SearchEngine.css";
 
-const SearchEngine = () => {
+const SearchEngine = ({ inNavbar }) => {
+  const className = inNavbar ? "navbar-search" : "search-container";
   return (
     <>
-      <div className="search-container">
+      <div className={className}>
         <form>
           <div className="form-group">
             <input

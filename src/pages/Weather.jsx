@@ -2,10 +2,12 @@ import AddFavourite from "../components/AddFavourite.jsx";
 import WeatherCurrentDay from "../components/WeatherCurrentDay.jsx";
 import WeatherForecast from "../components/WeatherForecast.jsx";
 
+import "./Weather.css";
+
 const Weather = () => {
   return (
     <div className="weather-container">
-      <h1>Telling you about ...</h1>
+      <h1 className="weather-title">Telling you about ...</h1>
       <AddFavourite />
       <WeatherCurrentDay
         day="Sunday"

@@ -56,7 +56,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        {location.pathname !== "/" && <SearchEngine />}
+        {location.pathname !== "/" && <SearchEngine inNavbar />}
       </nav>
     </div>
   );
