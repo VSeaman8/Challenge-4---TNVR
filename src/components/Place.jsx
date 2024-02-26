@@ -1,7 +1,7 @@
 const Place = () => {
   return (
     <div className="place-container">
-      <h2>Location</h2>
+      <h2>This is going to be </h2>
     </div>
   );
 };

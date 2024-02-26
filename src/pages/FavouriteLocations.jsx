@@ -1,4 +1,5 @@
-import FavouriteLocationsPlaces from "../components/FavouriteLocationsPlaces";
+import FavouriteLocationsPlaces from "../components/FavouriteLocationsPlaces.jsx";
+import "./FavouriteLocations.css";
 
 const FavouriteLocations = () => {
   return (
