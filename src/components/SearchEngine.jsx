@@ -1,17 +1,36 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SearchEngine.css";
+import dummyWeatherData from "../../data/dummyWeatherData.json";
 
 const SearchEngine = ({ inNavbar }) => {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
   const className = inNavbar ? "navbar-search" : "search-container";
+
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const data = dummyWeatherData[search.toLowerCase()];
+    navigate("/Weather", { state: { location: search, data } });
+  };
+
   return (
     <>
       <div className={className}>
-        <form>
+        <form onSubmit={handleSearchSubmit}>
           <div className="form-group">
             <input
               type="text"
               className="form-control"
               id="locationInput"
               placeholder="Enter Location"
+              value={search}
+              onChange={handleSearchChange}
             />
           </div>
 
