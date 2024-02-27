@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import fetchWeatherData from "../utilityFunctions/FetchWeatherData";
 import "./SearchEngine.css";
-import dummyWeatherData from "../../data/dummyWeatherData.json";
 
 const SearchEngine = ({ inNavbar }) => {
   const [search, setSearch] = useState("");
@@ -15,8 +15,8 @@ const SearchEngine = ({ inNavbar }) => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    const data = dummyWeatherData[search.toLowerCase()];
-    navigate("/Weather", { state: { location: search, data } });
+    const data = fetchWeatherData(search);
+    navigate("/Weather", { state: data });
   };
 
   return (

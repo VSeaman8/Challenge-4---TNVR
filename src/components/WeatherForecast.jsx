@@ -1,32 +1,11 @@
-import WeatherForecastDay from "./WeatherForcastDay.jsx";
+import WeatherForecastDay from "./WeatherForecastDay.jsx";
 
-const WeatherForecast = () => {
+const WeatherForecast = ({ forecast }) => {
   return (
     <div className="weather-grid">
-      <WeatherForecastDay
-        day="Monday"
-        temperature="20"
-        weather="Sunny"
-        icon="☀️"
-      />
-      <WeatherForecastDay
-        day="Tuesday"
-        temperature="22"
-        weather="Cloudy"
-        icon="☁️"
-      />
-      <WeatherForecastDay
-        day="Wednesday"
-        temperature="18"
-        weather="Rainy"
-        icon="🌧️"
-      />
-      <WeatherForecastDay
-        day="Thursday"
-        temperature="25"
-        weather="Sunny"
-        icon="☀️"
-      />
+      {forecast.map((dayData, index) => (
+        <WeatherForecastDay key={index} {...dayData} />
+      ))}
     </div>
   );
 };

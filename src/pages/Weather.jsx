@@ -12,20 +12,14 @@ const Weather = () => {
   if (!locationState) {
     return <h1>You haven't searched yet. Please search for a location</h1>;
   }
-  const { location, data } = locationState;
+  const { location, currentDayData, forecastData } = locationState;
   return (
     <div className="weather-container">
       <h2 className="weather-title">Telling you about ...</h2>
       <h1>{location}</h1>
       <AddFavourite />
-      <WeatherCurrentDay
-        day={data.currentDay.day}
-        temperature={data.list[0].main.temp}
-        weather={data.list[0].weather.description}
-        icon="☀️"
-      />
-
-      <WeatherForecast />
+      <WeatherCurrentDay {...currentDayData} />
+      <WeatherForecast forecast={forecastData} />
     </div>
   );
 };
