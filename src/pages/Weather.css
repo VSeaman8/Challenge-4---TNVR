@@ -5,7 +5,15 @@
   justify-content: center;
   align-items: center;
 }
-
+.not-searched {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 30px;
+  padding: 0;
+}
 .weather-container {
   display: flex;
   justify-content: flex-start;

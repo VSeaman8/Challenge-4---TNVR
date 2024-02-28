@@ -10,7 +10,11 @@ const Weather = () => {
   const locationState = useLocation().state;
 
   if (!locationState) {
-    return <h1>You haven't searched yet. Please search for a location</h1>;
+    return (
+      <h1 className="not-searched">
+        You haven't searched yet. Please search for a location
+      </h1>
+    );
   }
   const { location, currentDayData, forecastData } = locationState;
   return (

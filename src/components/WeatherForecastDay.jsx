@@ -3,7 +3,7 @@ const WeatherForecastDay = ({ day, temperature, weather, icon }) => {
     <div className="weather-day">
       <h2>{day}</h2>
       <img src={`/assets/weather-icons/${icon}.svg`} className="weather-icon" />
-      <p>{temperature}</p>
+      <p>{temperature}°C</p>
       <p>{weather}</p>
     </div>
   );
