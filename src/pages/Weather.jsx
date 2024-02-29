@@ -21,7 +21,7 @@ const Weather = () => {
     <div className="weather-container">
       <h2 className="weather-title">Telling you about ...</h2>
       <h1>{location}</h1>
-      <AddFavourite />
+      <AddFavourite location={location} />
       <WeatherCurrentDay {...currentDayData} />
       <WeatherForecast forecast={forecastData} />
     </div>

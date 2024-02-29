@@ -1,7 +1,10 @@
-const Place = () => {
+import AddFavourite from "./AddFavourite.jsx";
+
+const Place = ({ location }) => {
   return (
     <div className="place-container">
-      <h2>This is going to be </h2>
+      <h2>{location} </h2>
+      <AddFavourite location={location} />
     </div>
   );
 };
