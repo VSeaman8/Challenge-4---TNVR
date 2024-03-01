@@ -1,7 +1,7 @@
 const getLocations = () => {
-  let favourites = JSON.parse(localStorage.getItem("favourites"));
-  console.log(favourites);
-  return favourites ? favourites : [];
+  let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
+
+  return favourites.filter((location) => typeof location === "string");
 };
 
 const saveLocation = (location) => {
