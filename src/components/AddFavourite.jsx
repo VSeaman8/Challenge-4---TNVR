@@ -17,11 +17,10 @@ const AddFavourite = ({ location }) => {
     let favourites = getLocations();
 
     if (isFavourite) {
-      favourites = favourites.filter((favourite) => favourite !== location);
+      saveLocation(location, true);
     } else {
-      favourites.push(location);
+      saveLocation(location);
     }
-    saveLocation(favourites);
     setIsFavourite(!isFavourite);
   };
 

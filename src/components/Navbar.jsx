@@ -1,13 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
+import { getLocations } from "../utilityFunctions/SaveLocations.jsx";
 import SearchEngine from "./SearchEngine";
 import "./Navbar.css";
 
 const Navbar = () => {
   const location = useLocation();
+  const favouriteLocations = getLocations();
   return (
     <div className="navbar-container">
       <nav className="navbar navbar-expand-lg ">
-        <Link className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Tell Me About.....
         </Link>
         <button
@@ -24,7 +26,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item active">
-              <Link className="nav-link" href="#">
+              <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
@@ -43,15 +45,15 @@ const Navbar = () => {
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <Link className="dropdown-item" href="#">
-                  Action
-                </Link>
-                <Link className="dropdown-item" href="#">
-                  Another action
-                </Link>
-                <Link className="dropdown-item" href="#">
-                  Something else here
-                </Link>
+                {favouriteLocations.map((location, index) => (
+                  <Link
+                    key={index}
+                    className="dropdown-item"
+                    to={`//${location}`}
+                  >
+                    {location}
+                  </Link>
+                ))}
               </div>
             </li>
           </ul>
