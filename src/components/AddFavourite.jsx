@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 
-import {
-  getLocations,
-  saveLocation,
-} from "../utilityFunctions/SaveLocations.jsx";
+import { getLocations } from "../utilityFunctions/SaveLocations.jsx";
 
 const AddFavourite = ({ location }) => {
   const [isFavourite, setIsFavourite] = useState(false);

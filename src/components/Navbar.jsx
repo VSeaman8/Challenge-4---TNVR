@@ -64,7 +64,7 @@ const Navbar = () => {
                     <Link
                       key={index}
                       className="dropdown-item"
-                      to={`/location/${location}`}
+                      to={`/Weather/${location}`}
                     >
                       {location}
                     </Link>

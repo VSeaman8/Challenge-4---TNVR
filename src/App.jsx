@@ -20,6 +20,7 @@ const App = () => {
               path="/FavouriteLocations"
               element={<FavouriteLocations />}
             />
+            <Route path="/Weather/:location" element={<Weather />} />
           </Routes>
           <Footer />
         </Background>

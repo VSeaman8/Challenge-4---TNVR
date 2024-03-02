@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import AddFavourite from "../components/AddFavourite.jsx";
 import WeatherCurrentDay from "../components/WeatherCurrentDay.jsx";
@@ -8,22 +8,25 @@ import "./Weather.css";
 
 const Weather = () => {
   const locationState = useLocation().state;
+  const { location } = useParams();
 
-  if (!locationState) {
+  if (!locationState && !location) {
     return (
       <h1 className="not-searched">
         You haven't searched yet. Please search for a location
       </h1>
     );
   }
-  const { location, currentDayData, forecastData } = locationState;
+
+  const locationName = locationState ? locationState.location : location;
+
   return (
     <div className="weather-container">
       <h2 className="weather-title">Telling you about ...</h2>
-      <h1>{location}</h1>
-      <AddFavourite location={location} />
-      <WeatherCurrentDay {...currentDayData} />
-      <WeatherForecast forecast={forecastData} />
+      <h1>{locationName.charAt(0).toUpperCase() + locationName.slice(1)}</h1>
+      <AddFavourite location={locationName} />
+      <WeatherCurrentDay location={locationName} />
+      <WeatherForecast location={locationName} />
     </div>
   );
 };
