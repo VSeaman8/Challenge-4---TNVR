@@ -1,10 +1,11 @@
 import AddFavourite from "./AddFavourite.jsx";
+import "./Place.css";
 
 const Place = ({ location }) => {
   return (
     <div className="place-container">
-      <h2>{location} </h2>
       <AddFavourite location={location} />
+      <h3>{location.charAt(0).toUpperCase() + location.slice(1)} </h3>
     </div>
   );
 };

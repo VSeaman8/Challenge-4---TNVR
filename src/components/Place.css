@@ -1,7 +1,7 @@
-.search-button {
+.place-button {
   margin: 20px 20px 20px 45px;
-  height: 50px;
-  width: 120px;
+  height: 30px;
+  width: 150px;
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -9,15 +9,27 @@
     inset -5px -5px 10px #222;
   cursor: pointer;
   border: none;
-  font-size: 16px;
-  color: rgb(128, 128, 128);
+  font-size: 12px;
+  color: white; /* change this to your desired text color */
+  background-color: rgb(
+    128,
+    128,
+    128
+  ); /* change this to your desired background color */
   transition: 500ms;
   display: flex;
+  white-space: nowrap;
 }
 
-.search-button:hover {
+.place-button:hover {
   box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
     inset -5px -5px 10px #444;
   color: #d6d6d6;
   transition: 500ms;
+}
+
+.place-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

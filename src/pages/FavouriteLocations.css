@@ -1,9 +1,20 @@
 .favouriteLocation-container {
   display: flex;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   height: 80vh;
   flex-direction: column;
   padding: 0;
-  margin-top: 0;
+  margin-top: 50px;
+}
+.location-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px 30px;
+}
+
+.location-container a {
+  text-decoration: none;
+  color: aliceblue;
 }

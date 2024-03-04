@@ -4,10 +4,9 @@ import "./FavouriteLocations.css";
 const FavouriteLocations = () => {
   return (
     <div className="favouriteLocation-container">
-      <h1>Telling you about ...</h1>
-      <h2>Favourite Locations</h2>
-      <h3>Click to remove favourite </h3>
-      <h3>Click name to view info</h3>
+      <h2>Telling you about ...</h2>
+      <h1>Favourite Locations</h1>
+      <h4>Click name to view info</h4>
       <FavouriteLocationsPlaces />
     </div>
   );

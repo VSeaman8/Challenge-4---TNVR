@@ -23,7 +23,7 @@ const AddFavourite = ({ location }) => {
   };
 
   return (
-    <button onClick={handleButtonClick}>
+    <button className="place-button" onClick={handleButtonClick}>
       {isFavourite ? "Remove from Favourites" : "Add to Favourites"}
     </button>
   );
