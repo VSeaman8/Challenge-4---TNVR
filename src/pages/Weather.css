@@ -37,5 +37,28 @@
 }
 
 .weather-title {
-  font-size: 40px;
+  font-size: 50px;
+}
+
+.place-button {
+  margin: 20px 20px 20px 45px;
+  height: 30px;
+  width: 250px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  color: white; /* change this to your desired text color */
+  background-color: rgb(
+    128,
+    128,
+    128
+  ); /* change this to your desired background color */
+  transition: 500ms;
+  display: flex;
+  white-space: nowrap;
 }

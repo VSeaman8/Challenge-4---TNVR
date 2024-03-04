@@ -6,7 +6,7 @@ const FavouriteLocations = () => {
     <div className="favouriteLocation-container">
       <h2>Telling you about ...</h2>
       <h1>Favourite Locations</h1>
-      <h4>Click name to view info</h4>
+      <h4 className="click-name">Click name to view info</h4>
       <FavouriteLocationsPlaces />
     </div>
   );

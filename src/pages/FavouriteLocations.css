@@ -7,6 +7,10 @@
   padding: 0;
   margin-top: 50px;
 }
+
+.click-name {
+  margin-bottom: 50px;
+}
 .location-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -17,4 +21,8 @@
 .location-container a {
   text-decoration: none;
   color: aliceblue;
+}
+
+.location-decoration {
+  font-size: 40px;
 }

@@ -5,7 +5,9 @@ const Place = ({ location }) => {
   return (
     <div className="place-container">
       <AddFavourite location={location} />
-      <h3>{location.charAt(0).toUpperCase() + location.slice(1)} </h3>
+      <h3 className="location-decoration">
+        {location.charAt(0).toUpperCase() + location.slice(1)}{" "}
+      </h3>
     </div>
   );
 };

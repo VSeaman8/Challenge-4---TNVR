@@ -22,8 +22,10 @@ const Weather = () => {
 
   return (
     <div className="weather-container">
-      <h2 className="weather-title">Telling you about ...</h2>
-      <h1>{locationName.charAt(0).toUpperCase() + locationName.slice(1)}</h1>
+      <h2>Telling you about ...</h2>
+      <h1 className="weather-title">
+        {locationName.charAt(0).toUpperCase() + locationName.slice(1)}
+      </h1>
       <AddFavourite location={locationName} />
       <WeatherCurrentDay location={locationName} />
       <WeatherForecast location={locationName} />
