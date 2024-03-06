@@ -1,14 +1,8 @@
-import { useEffect, useState } from "react";
-import fetchWeatherData from "../utilityFunctions/FetchWeatherData.jsx";
 import WeatherForecastDay from "./WeatherForecastDay.jsx";
 
-const WeatherForecast = ({ location }) => {
-  const [forecastData, setForecastData] = useState(null);
-
-  useEffect(() => {
-    const data = fetchWeatherData(location);
-    setForecastData(data.forecastData);
-  }, [location]);
+const WeatherForecast = ({ weatherData }) => {
+  console.log(weatherData);
+  const { forecastData } = weatherData;
 
   if (!forecastData) {
     return <div>Loading...</div>;

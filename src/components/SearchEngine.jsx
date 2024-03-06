@@ -1,20 +1,23 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useRef } from "react";
+import FetchAndNavigate from "./FetchAndNavigate.jsx";
 import "./SearchEngine.css";
 
 const SearchEngine = ({ inNavbar }) => {
   const [search, setSearch] = useState("");
-  const navigate = useNavigate();
+  const [submit, setSubmit] = useState(false);
+  //const searchRef = useRef();
 
   const className = inNavbar ? "navbar-search" : "search-container";
 
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
+    //searchRef.current = event.target.value;
   };
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    navigate("/Weather", { state: { location: search } });
+    console.log(search);
+    setSubmit(true);
   };
 
   return (
@@ -37,6 +40,7 @@ const SearchEngine = ({ inNavbar }) => {
           </button>
         </form>
       </div>
+      {submit && <FetchAndNavigate location={search} />}
     </>
   );
 };

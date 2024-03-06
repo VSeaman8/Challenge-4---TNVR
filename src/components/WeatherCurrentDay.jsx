@@ -1,13 +1,7 @@
-import { useEffect, useState } from "react";
-import fetchWeatherData from "../utilityFunctions/FetchWeatherData.jsx";
+import useFetchWeatherData from "../utilityFunctions/useFetchWeatherData.jsx";
 
-const WeatherCurrentDay = ({ location }) => {
-  const [currentDayData, setCurrentDayData] = useState(null);
-
-  useEffect(() => {
-    const data = fetchWeatherData(location);
-    setCurrentDayData(data.currentDayData);
-  }, [location]);
+const WeatherCurrentDay = ({ weatherData }) => {
+  const { currentDayData } = weatherData;
 
   if (!currentDayData) {
     return <div>Loading...</div>;
