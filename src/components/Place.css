@@ -1,0 +1,35 @@
+.place-button {
+  margin: 20px 20px 20px 45px;
+  height: 30px;
+  width: 150px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  cursor: pointer;
+  border: none;
+  font-size: 12px;
+  color: white; /* change this to your desired text color */
+  background-color: rgb(
+    128,
+    128,
+    128
+  ); /* change this to your desired background color */
+  transition: 500ms;
+  display: flex;
+  white-space: nowrap;
+}
+
+.place-button:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+    inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
+}
+
+.place-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

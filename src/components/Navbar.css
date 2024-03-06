@@ -1,0 +1,19 @@
+.navbar-container {
+  padding: 0 40px;
+  color: #d6d6d6;
+}
+
+.navbar-search {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-search form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-search .form-group {
+  flex-grow: 1;
+}
