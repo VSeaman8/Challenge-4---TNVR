@@ -52,6 +52,7 @@ const useFetchWeatherData = (location) => {
             weather: weatherData.list[0].weather[0].description,
             icon: weatherData.list[0].weather[0].icon,
         };
+
         setCurrentDayData(currentData);
 
         // TODO: I'm not sure that all this needs to be done here?  Can you refactor it out and call it?
